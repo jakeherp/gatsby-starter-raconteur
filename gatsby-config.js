@@ -1,8 +1,12 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: `Raconteur`,
     description: `A new site by Raconteur`,
-    siteUrl: `https://xxx.raconteur.net`,
+    siteUrl: process.env.SITE_URL,
     author: `Jacob Herper <jacob@herper.io>`,
   },
   plugins: [
@@ -21,7 +25,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-tagmanager`,
       options: {
-        id: `GTM-XXXXXXX`,
+        id: process.env.GTM_ID,
         includeInDevelopment: false,
       },
     },
