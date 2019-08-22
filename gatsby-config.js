@@ -36,13 +36,7 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-styled-components`,
-    {
-      resolve: `gatsby-plugin-tslint`,
-      options: {
-        test: /\.ts$|\.tsx$/,
-        exclude: /(node_modules|cache|public)/,
-      },
-    },
+    `gatsby-plugin-tslint`,
     `gatsby-plugin-typescript`,
     {
       resolve: `gatsby-source-filesystem`,
